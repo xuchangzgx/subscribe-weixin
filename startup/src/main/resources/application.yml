@@ -1,0 +1,24 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+  compression:
+    enabled: true # 开启压缩
+# 微信配置
+wx:
+  token: 63af53a0c4ea411983ee8bd137521220
+  appid: wx25fe0044874e305b
+  appsecret: f4bbf13ebb1469292cc7c864c5195bf1
+  encoding-aes-key: BN5s4J4A48MjJz2HLyNGxa5VMAivB7p28tyu93HHygH
+  encrypt: false
+  #  callback-url:
+  system:
+    menu-refresh-interval-ms: 3600000
+    remote-menu-mapper: false
+  url:
+    showQrCode: /cgi-bin/showqrcode
+    getMenu: /cgi-bin/menu/get
+logging:
+  config: classpath:log4j2-spring.xml
+  level:
+    top.iyou8.subscribeweixin.*.*: debug
